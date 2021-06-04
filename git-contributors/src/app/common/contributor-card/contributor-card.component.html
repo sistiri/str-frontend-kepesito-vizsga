@@ -1,0 +1,26 @@
+<!-- <p>contributor-card works!</p> -->
+
+<div class="card border-0">
+
+
+    <div class="d-flex m-4">
+        <img src="{{ contributor.avatar_url }}" class="card-img-top rounded" alt="{{ contributor.login }}">
+        <div class="align-self-end"><span class="text-muted">@github</span></div>
+        <div class="ml-auto"><i class="fa fa-map-marker fa-2x" aria-hidden="true"></i></div>
+
+
+    </div>
+
+    <div class="card-body">
+        <h5 class="card-title">{{ contributor.login }}</h5>
+        <h6 class="card-subtitle text-muted">{{contributor.contributions}} commits</h6>
+        <div class="text-center">
+
+            <!-- [Példa egy felhasználó tárolóinak a lekérésére](https://api.github.com/users/cherryApp/repos) -->
+            <a [routerLink]="['/contributors', contributor.login]" class="btn btn-outline-primary text-center mt-4 mb-2">VIEW
+                REPOSITORIES</a>
+            <!-- <button  [routerLink]="[contributor.login]" class="btn btn-outline-primary" type="button">VIEW REPOSITORIES</button> -->
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import "../node_modules/font-awesome/css/font-awesome.min.css";
+
+
+
+.card-img-top {
+width: 40%;
+height: 100%;
+object-fit: contain;
+// float:left;
+}
+
+.card {
+    border-radius: 10px;
+}

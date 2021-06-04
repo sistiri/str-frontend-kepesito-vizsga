@@ -1,0 +1,27 @@
+
+<div class="container col-8">
+    <div class="row mt-3">
+        <h2>{{ loginName }}</h2>
+    </div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <!-- <th scope="col">#</th> -->
+                <th scope="col">Repo name</th>
+                <th scope="col">Forked</th>
+                <th scope="col">Stars</th>
+                <th scope="col">Updated</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let repo of repoList$ | async | sorter:key">
+                <!-- <th scope="row">#</th> -->
+                <td>{{ repo.name }}</td>
+                <td>{{ repo.fork }}</td>
+                <td>{{ repo.stargazers_count}}</td>
+                <td>{{ repo.updated_at }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
